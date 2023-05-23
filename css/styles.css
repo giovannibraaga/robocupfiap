@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+/* inicio scrollbar */
+::-webkit-scrollbar {
+    width: .26vw;
+    height: 0vh;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    background: #015f01;
+}
+::-webkit-scrollbar-thumb {
+    background: #015f01;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #008000;
+}
+/* fim scrollbar */
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.header-page {
+    background-color: #313131;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.logo-fiap {
+    margin-right: 3vmax;
+
+    width: 103px;
+    height: 63px;
+}
+
+.eco-sharpness {
+    margin-left: 3vmax;
+    
+    width: 153px;
+    height: 130px;
+}
+
+.header-page a {
+    color: #008000;
+
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-menu ul {
+    margin-left: 60vmax;
+
+    display: flex;
+    flex-direction: end;
+    gap: 20px;
+
+    font-weight: 900;
+}
+
+.container {
+    text-align: justify;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container img {
+    width: 62.6vw;
+    height: 60.9vh;
+
+    margin-left: -3.5vw;
+}
+
+.container p {
+    width: 34.3vw;
+    height: 51.7vh;
+
+    color: white;
+
+    font-weight: bold;
+    font-size: 3.3vh;
+    text-align: right;
+    position: absolute;
+
+    margin-left: 54.1vmax;
+    margin-top: 13.5vh;
+}
+
+.sobre {
+    background-color: #313131;
+    color: #008000;
+
+    font-size: small;
+
+    padding: 10px;
+}
+
+.sobre h2 {
+    margin-left: 3.3vmax;
+}
+
+.footer-page {
+    text-align: center;
+    font-size: small;
+
+    background-color: #313131;
+    color: #ffffff;
+
+    padding: 10px;
+}
+
+.footer-page span {
+    color:#008000;
+}
+
+.bg-img {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(../img/ceu-estrelado.png);
+}
+
+.bg-grey {
+    background-color: #3C3C3C;
+}
