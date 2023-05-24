@@ -23,6 +23,13 @@
 /* fim scrollbar */
 
 /* media query */
+@media screen and (max-width: 830px) {
+    .container p {
+      height: 100%;  
+      font-size: 0.4rem;
+    }
+  }
+
 @media screen and (max-width: 768px) {
     .header-menu ul {
         font-size: .5rem;
@@ -54,14 +61,31 @@
 }
 
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+  
     .container img {
-      max-width: 60%;
+      width: 100%;
       height: auto;
+      max-height: 60.9vh;
+      object-fit: contain;
+      margin-bottom: 10px;
     }
   
     .container p {
-      max-width: 40%;
-      font-size: 1.8rem;
+      font-size: 0.4rem;
+      text-align: justify;
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+  
+    .bg-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 /* fim media query */
