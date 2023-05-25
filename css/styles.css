@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 475px) {
     .header-menu ul {
-        font-size: 6px;
+        font-size: 9px;
     }
 
     .container img {
@@ -80,12 +80,18 @@
       text-align: center;
       max-width: 100%;
       margin-bottom: 0;
+
+      flex-wrap: wrap;
     }
   
     .bg-img {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .cards img {
+        height: 125px;
     }
   }
 /* fim media query */
@@ -109,10 +115,6 @@ a:hover {
 
 ul, ol {
     list-style: none;
-}
-
-.header-container {
-    height: 80px;
 }
 
 .header-page {
@@ -155,7 +157,6 @@ ul, ol {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 
     background-position: 50%;
     background-repeat: no-repeat;
@@ -178,6 +179,8 @@ ul, ol {
 
     margin-top: 0;
     margin-bottom: 0;
+
+    flex-wrap: wrap;
 }
 
 .sobre {
@@ -192,10 +195,6 @@ ul, ol {
     text-align: center;
 }
 
-.sobre h2 {
-    margin-left: 3.3vmax;
-}
-
 .container-cards {
     width: 100%;
     min-height: 100vh;
@@ -206,23 +205,20 @@ ul, ol {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    row-gap: 25px;
+    flex-wrap: wrap;
 }
 
 .cards {
-    background-color: #313131;
-
-    width: 35%;
+    margin: 15px 0;
+    width: 28%;
     padding: 20px;
 
-    font-weight: 800;
-    font-size: 1.125rem;
     text-align: center;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     box-shadow: .5px .5px 30px #004d00;
     border-radius: 30px;
@@ -234,8 +230,8 @@ ul, ol {
 }
 
 .cards img {
-    width: 85%;
-    height: 40vh;
+    width: 80%;
+    height: 400px;
 
     border-radius: 10px;
 }
