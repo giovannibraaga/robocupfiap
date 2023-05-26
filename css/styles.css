@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'Merriweather Sans', sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* inicio scrollbar */
 ::-webkit-scrollbar {
     width: .26vw;
@@ -21,84 +26,6 @@
     background: #00aa00;
 }
 /* fim scrollbar */
-
-/* media query */
-@media screen and (max-width: 830px) {
-    .container p {
-      height: 100%;  
-      font-size: 0.4rem;
-    }
-  }
-
-@media screen and (max-width: 768px) {
-    .header-menu ul {
-        font-size: .5rem;
-    }
-
-    .sobre {
-        font-size: 6px;
-    }
-}
-
-@media screen and (max-width: 475px) {
-    .header-menu ul {
-        font-size: 9px;
-    }
-
-    .container img {
-        width: 80vw;
-        height: fit-content;
-    }
-
-    .container p {
-        position: absolute;
-        top: 10vh;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 2.5vh;
-        max-width: 80vw;
-    }
-}
-
-@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-      padding: 0 20px;
-    }
-  
-    .container img {
-      width: 100%;
-      height: auto;
-      max-height: 60.9vh;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-  
-    .container p {
-      font-size: 0.4rem;
-      text-align: center;
-      max-width: 100%;
-      margin-bottom: 0;
-
-      flex-wrap: wrap;
-    }
-  
-    .bg-img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .cards img {
-        height: 125px;
-    }
-  }
-/* fim media query */
-
-html {
-    scroll-behavior: smooth;
-}
 
 a {
     color: #008000;
@@ -163,25 +90,103 @@ ul, ol {
     background-size: cover;
 }  
 
-.container img {
-    height: 60.9vh;
-    max-width: 50%;
+.img-container {
+    height: 60vh;
+    width: 100%;
 }
 
-  .container p {
-    max-height: 60.9vh;
-    max-width: 50%;
+.p-content {
+    width: 50%;
     color: white;
     
     font-weight: bold;
-    font-size: 1.95rem;
+    font-size: 1.6rem;
     text-align: center;
+
+    justify-content: flex-end;
 
     margin-top: 0;
     margin-bottom: 0;
-
-    flex-wrap: wrap;
 }
+
+@media screen and (max-width: 860px) {
+    .container {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+    
+    
+    .p-container {
+      font-size: 1.3rem;
+    }
+
+    .img-container {
+        width: 95%;
+        height: 50vh;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .p-container {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .img-container {
+        width: 90%;
+        height: 43vh;
+
+        margin-top: -100px;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 490px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .p-container {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .img-container {
+        width: 80%;
+        height: 32vh;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .container {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .p-container {
+        margin-top: 0;
+
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .img-container {
+        width: 65%;
+        height: 26vh;
+    }
+}
+
 
 .sobre {
     background-color: #313131;
@@ -197,7 +202,7 @@ ul, ol {
 
 .container-cards {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
 
     padding-top: 20px;
     padding-bottom: 20px;
@@ -205,7 +210,6 @@ ul, ol {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .cards {
@@ -240,12 +244,61 @@ ul, ol {
     margin: 20px 0;
 
     color: #008000;
+
+    font-size: 25px;
 }
 
 .cards p {
     margin-bottom: 30px;
 
     color: #ffffff;
+
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .cards img {
+        height: 200px;
+    }
+
+    .cards h3 {
+        font-size: 22px;
+    }
+
+    .cards p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .cards img {
+        height: 150px;
+    }
+
+    .cards h3 {
+        font-size: 20px;
+    }
+
+    .cards p {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 415px) {
+    .cards img {
+        height: 100px;
+    }
+
+    .cards h3 {
+        font-size: 16px;
+    }
+
+    .cards p {
+        font-size: 10px;
+    }
 }
 
 .footer-page {
@@ -271,3 +324,89 @@ ul, ol {
 .bg-grey {
     background-color: #3C3C3C;
 }
+
+/* media query */
+@media screen and (max-width: 768px) {
+    .header-menu ul {
+        font-size: 12px;
+    }
+
+    .sobre {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .header-menu ul {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+
+      justify-content: center;
+    }
+  
+    .img-container {
+      width: 100%;
+
+      margin-top: -100px ;
+    }
+  
+    .p-content {
+      font-size: 7px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .cards img {
+        height: 115px;
+    }
+    
+    .bg-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 3) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+
+        justify-content: center;
+        padding: 0 20px;
+      }
+    
+    .img-container {
+        width: 100%;
+        height: auto;
+        max-height: 60.9vh;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+    
+    .p-content {
+        font-size: 12px;
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 0;
+  
+        flex-wrap: wrap;
+      }
+  
+    .cards img {
+          height: 125px;
+      }
+      
+    .bg-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }    
+  }
+/* fim media query */
